@@ -1,0 +1,47 @@
+---
+title: "MyFirstPackage Vignette"
+author: "YHu"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+Here is the vignette of my first package. 
+
+# What the Package is About
+The package contains several function to read and proces data from the *Fatality Analysi Reporting System*. Below is a list of the functions:
+
+|Function Name         |Description                                         |
+|----------------------|----------------------------------------------------|
+|fars_read|Read data from a csv file. The function also uses the tbl_df wrapper from dplyr to make sure the system won't print a lot of data to the screen.|
+|make_filename|Make a file name with speicified accident year.|
+|fars_read_years|Read user specified year for the FARS data|
+|fars_summarize_years|Summarize number of accidents across each month for the specified year.|
+|fars_map_state|Mapping the location of the accidents (based on latitude and longitude) with user speicifed state numbe and accident year|
+
+# How to use 
+This section provides the example code to use the functions included in this package.
+
+##fars_read()
+```{r,eval=FALSE}
+data <- fars_read("accident_2013.csv.bz2")
+```
+##make_filename()
+```{r,eval=FALSE}
+make_filename(2013)
+```
+##fars_read_years()
+```{r,eval=FALSE}
+fars_read_years(2013)
+```
+##fars_summarize_year()
+```{r,eval=FALSE}
+fars_summarize_years(2013)
+```
+##fars_map_state()
+```{r,eval=FALSE}
+fars_map_state(10,2013)
+```

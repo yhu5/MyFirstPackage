@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"MyFirstPackage Vignette\"\nauthor: \"YHu\"\ndate: \"`r Sys.Date()`\"\noutput: rmarkdown::html_vignette\nvignette: >\n  %\\VignetteIndexEntry{Vignette Title}\n  %\\VignetteEngine{knitr::rmarkdown}\n  %\\VignetteEncoding{UTF-8}\n---\n\nHere is the vignette of my first package. \n\n# What the Package is About\nThe package contains several function to read and proces data from the *Fatality Analysi Reporting System*. Below is a list of the functions:\n\n|Function Name         |Description                                         |\n|----------------------|----------------------------------------------------|\n|fars_read|Read data from a csv file. The function also uses the tbl_df wrapper from dplyr to make sure the system won't print a lot of data to the screen.|\n|make_filename|Make a file name with speicified accident year.|\n|fars_read_years|Read user specified year for the FARS data|\n|fars_summarize_years|Summarize number of accidents across each month for the specified year.|\n|fars_map_state|Mapping the location of the accidents (based on latitude and longitude) with user speicifed state numbe and accident year|\n\n# How to use \nThis section provides the example code to use the functions included in this package.\n\n##fars_read()\n```{r,eval=FALSE}\ndata <- fars_read(\"accident_2013.csv.bz2\")\n```\n##make_filename()\n```{r,eval=FALSE}\nmake_filename(2013)\n```\n##fars_read_years()\n```{r,eval=FALSE}\nfars_read_years(2013)\n```\n##fars_summarize_year()\n```{r,eval=FALSE}\nfars_summarize_years(2013)\n```\n##fars_map_state()\n```{r,eval=FALSE}\nfars_map_state(10,2013)\n```\n",
+    "created" : 1506872841266.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2596327721",
+    "id" : "84D505BC",
+    "lastKnownWriteTime" : 1506874020,
+    "last_content_update" : 1506874020203,
+    "path" : "~/MyFirstPackage/vignettes/my_vignette.Rmd",
+    "project_path" : "vignettes/my_vignette.Rmd",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
