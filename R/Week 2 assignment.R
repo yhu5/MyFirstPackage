@@ -1,13 +1,11 @@
 #' @title Read Data from Fatality Analysis Reporting System
 #'
-#' @description Read data from a csv file. The function also uses the tbl_df wrapper from dplyr to make sure 
+#' @description Read data from a csv file. The function also uses the tbl_df wrapper from dplyr to make sure
 #' the system won't print a lot of data to the screen
 #'
 #' @param filename the path to the data
 #' @return the wrapped dataset
-#' @examples
-#' data <- fars_read("accident_2013.csv.bz2")
-#' @note The data has to be in csv format 
+#' @note The data has to be in csv format
 #' @export
 fars_read <- function(filename) {
   if(!file.exists(filename))
@@ -18,7 +16,7 @@ fars_read <- function(filename) {
   dplyr::tbl_df(data)
 }
 
-#' @title Make a file name 
+#' @title Make a file name
 #'
 #' @description Make a file name with speicified accident year
 #'
@@ -33,7 +31,7 @@ make_filename <- function(year) {
 }
 
 
-#' @title Read the year 
+#' @title Read the year
 #'
 #' @description Read user specified year for the FARS data
 #'
@@ -47,7 +45,7 @@ fars_read_years <- function(years) {
     file <- make_filename(year)
     tryCatch({
       dat <- fars_read(file)
-      dplyr::mutate(dat, year = year) %>% 
+      dplyr::mutate(dat, year = year) %>%
         dplyr::select(MONTH, year)
     }, error = function(e) {
       warning("invalid year: ", year)
@@ -57,7 +55,7 @@ fars_read_years <- function(years) {
 }
 
 
-#' @title Summarize the FARS data with specified accident year 
+#' @title Summarize the FARS data with specified accident year
 #'
 #' @description Summarize number of accidents across each month for the specified year
 #'
@@ -68,8 +66,8 @@ fars_read_years <- function(years) {
 #' @export
 fars_summarize_years <- function(years) {
   dat_list <- fars_read_years(years)
-  dplyr::bind_rows(dat_list) %>% 
-    dplyr::group_by(year, MONTH) %>% 
+  dplyr::bind_rows(dat_list) %>%
+    dplyr::group_by(year, MONTH) %>%
     dplyr::summarize(n = n()) %>%
     tidyr::spread(year, n)
 }
@@ -79,10 +77,10 @@ fars_summarize_years <- function(years) {
 #'
 #' @description Mapping the location of the accidents (based on latitude and longitude) with user speicifed state number
 #' and accident year
-#' 
+#'
 #' @param state.num state code
 #' @param year accident year
-#' 
+#'
 #' @return a map showing the location of the accidents
 #' @note the function will require "maps" package
 #' @examples
@@ -93,7 +91,7 @@ fars_map_state <- function(state.num, year) {
   filename <- make_filename(year)
   data <- fars_read(filename)
   state.num <- as.integer(state.num)
-  
+
   if(!(state.num %in% unique(data$STATE)))
     stop("invalid STATE number: ", state.num)
   data.sub <- dplyr::filter(data, STATE == state.num)
