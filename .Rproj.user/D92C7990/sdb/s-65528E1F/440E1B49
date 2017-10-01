@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# MyFirstPackage\n\nThis is the README file.\n",
+    "created" : 1506880344929.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1431408472",
+    "id" : "440E1B49",
+    "lastKnownWriteTime" : 1506880872,
+    "last_content_update" : 1506880872843,
+    "path" : "~/MyFirstPackage/README.md",
+    "project_path" : "README.md",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "markdown"
+}
