@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "# MyFirstPackage\n\nThis is the README file.\n\n#Travis Badge\n\n",
+    "contents" : "# MyFirstPackage\n\nThis is the README file.\n\n\n\n",
     "created" : 1506880344929.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1556629183",
+    "hash" : "708102123",
     "id" : "440E1B49",
-    "lastKnownWriteTime" : 1506881976,
-    "last_content_update" : 1506881976469,
+    "lastKnownWriteTime" : 1506882480,
+    "last_content_update" : 1506882480253,
     "path" : "~/MyFirstPackage/README.md",
     "project_path" : "README.md",
     "properties" : {
