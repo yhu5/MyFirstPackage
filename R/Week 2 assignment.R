@@ -5,6 +5,10 @@
 #'
 #' @param filename the path to the data
 #' @return the wrapped dataset
+#' @examples
+#' \dontrun{data <- fars_read("accident_2013.csv.bz2")}
+#' @importFrom readr read_csv
+#' @importFrom dplyr tbl_df
 #' @note The data has to be in csv format
 #' @export
 fars_read <- function(filename) {
@@ -23,7 +27,7 @@ fars_read <- function(filename) {
 #' @param year your desired accident year
 #' @return a character string of the name of the file
 #' @examples
-#' make_filename(2013)
+#' \dontrun{make_filename(2013)}
 #' @export
 make_filename <- function(year) {
   year <- as.integer(year)
@@ -38,7 +42,9 @@ make_filename <- function(year) {
 #' @param year your desired accident year
 #' @return a tibble with month and year
 #' @examples
-#' fars_read_years(2013)
+#' \dontrun{fars_read_years(2013)}
+#' @import dplyr mutate
+#' @import dplyr select
 #' @export
 fars_read_years <- function(years) {
   lapply(years, function(year) {
@@ -62,7 +68,11 @@ fars_read_years <- function(years) {
 #' @param year accident year
 #' @return a tibble showing number of accident by month
 #' @examples
-#' fars_summarize_years(2013)
+#' \dontrun{fars_summarize_years(2013)}
+#' @import dplyr bind_rows
+#' @import dplyr group_by
+#' @import dplyr summarize
+#' @import tidyr spread
 #' @export
 fars_summarize_years <- function(years) {
   dat_list <- fars_read_years(years)
@@ -84,8 +94,10 @@ fars_summarize_years <- function(years) {
 #' @return a map showing the location of the accidents
 #' @note the function will require "maps" package
 #' @examples
-#' fars_map_state(10,2013)
-
+#' \dontrun{fars_map_state(10,2013)}
+#' @import maps map
+#' @import graphics points
+#' @import dplyr filter
 #' @export
 fars_map_state <- function(state.num, year) {
   filename <- make_filename(year)

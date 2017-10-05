@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "Package: MyFirstPackage\nType: Package\nTitle: My First Package\nImports: dplyr, readr, tidyr, maps, magrittr\nVersion: 0.1.0\nAuthor: YHu\nMaintainer: YHu <yiny.hu@gmail.com>\nDescription: My First Packages\nLicense: What license is it under?\nEncoding: UTF-8\nLazyData: true\nSuggests: knitr,\n    rmarkdown\nVignetteBuilder: knitr\nRoxygenNote: 6.0.1\n",
+    "created" : 1507165867319.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3856768320",
+    "id" : "C9E8A025",
+    "lastKnownWriteTime" : 1507165966,
+    "last_content_update" : 1507165966795,
+    "path" : "~/MyFirstPackage/DESCRIPTION",
+    "project_path" : "DESCRIPTION",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "dcf"
+}
