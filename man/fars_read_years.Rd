@@ -16,5 +16,5 @@ a tibble with month and year
 Read user specified year for the FARS data
 }
 \examples{
-fars_read_years(2013)
+\dontrun{fars_read_years(2013)}
 }

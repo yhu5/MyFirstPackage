@@ -22,5 +22,5 @@ and accident year
 the function will require "maps" package
 }
 \examples{
-fars_map_state(10,2013)
+\dontrun{fars_map_state(10,2013)}
 }

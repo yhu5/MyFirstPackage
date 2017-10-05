@@ -16,5 +16,5 @@ a tibble showing number of accident by month
 Summarize number of accidents across each month for the specified year
 }
 \examples{
-fars_summarize_years(2013)
+\dontrun{fars_summarize_years(2013)}
 }

@@ -16,5 +16,5 @@ a character string of the name of the file
 Make a file name with speicified accident year
 }
 \examples{
-make_filename(2013)
+\dontrun{make_filename(2013)}
 }

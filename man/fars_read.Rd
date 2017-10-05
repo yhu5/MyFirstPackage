@@ -13,12 +13,9 @@ fars_read(filename)
 the wrapped dataset
 }
 \description{
-Read data from a csv file. The function also uses the tbl_df wrapper from dplyr to make sure 
+Read data from a csv file. The function also uses the tbl_df wrapper from dplyr to make sure
 the system won't print a lot of data to the screen
 }
 \note{
 The data has to be in csv format
-}
-\examples{
-data <- fars_read("accident_2013.csv.bz2")
 }
