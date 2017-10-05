@@ -5,8 +5,6 @@
 #'
 #' @param filename the path to the data
 #' @return the wrapped dataset
-#' @examples
-#' \dontrun{data <- fars_read("accident_2013.csv.bz2")}
 #' @importFrom readr read_csv
 #' @importFrom dplyr tbl_df
 #' @note The data has to be in csv format
