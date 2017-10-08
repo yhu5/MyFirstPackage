@@ -7,7 +7,7 @@
 fars_read_years(years)
 }
 \arguments{
-\item{year}{your desired accident year}
+\item{years}{a vector of your desired accident years}
 }
 \value{
 a tibble with month and year

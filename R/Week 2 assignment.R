@@ -37,7 +37,7 @@ make_filename <- function(year) {
 #'
 #' @description Read user specified year for the FARS data
 #'
-#' @param year your desired accident year
+#' @param years a vector of your desired accident years
 #' @return a tibble with month and year
 #' @examples
 #' \dontrun{fars_read_years(2013)}
